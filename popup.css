@@ -1,0 +1,162 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 320px;
+  margin: 0;
+  background: #101114;
+  color: #f4f4f5;
+  font: 14px/1.45 system-ui, sans-serif;
+}
+
+main {
+  padding: 18px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dog {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  border-radius: 13px;
+  background: #292a30;
+  font-size: 25px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+header p {
+  margin: 2px 0 0;
+  color: #a1a1aa;
+  font-size: 11px;
+}
+
+.status-card {
+  background: #24242b;
+  border: 1px solid #383842;
+  padding: 11px;
+  border-radius: 9px;
+  margin-bottom: 14px;
+}
+
+.status-card b,
+.status-card small {
+  display: block;
+}
+
+.status-card b {
+  font-size: 12px;
+}
+
+.status-card small {
+  color: #a1a1aa;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid #303038;
+  border-bottom: 1px solid #303038;
+  cursor: pointer;
+}
+
+.toggle b,
+.toggle small {
+  display: block;
+}
+
+.toggle small {
+  margin-top: 3px;
+  color: #a1a1aa;
+  font-size: 11px;
+}
+
+.toggle input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+
+.switch {
+  width: 38px;
+  height: 22px;
+  border-radius: 99px;
+  background: #45454f;
+  position: relative;
+  flex: 0 0 auto;
+  transition: background .15s;
+}
+
+.switch::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 3px;
+  top: 3px;
+  border-radius: 50%;
+  background: white;
+  transition: transform .15s;
+}
+
+.toggle input:checked + .switch {
+  background: #e34b61;
+}
+
+.toggle input:checked + .switch::after {
+  transform: translateX(16px);
+}
+
+.hint {
+  color: #a1a1aa;
+  font-size: 11px;
+  margin: 12px 0 15px;
+}
+
+button {
+  width: 100%;
+  border: 0;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  background: #e34b61;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #f05a70;
+}
+
+#status {
+  min-height: 18px;
+  margin-top: 8px;
+  color: #86efac;
+  font-size: 11px;
+}
+
+.footer {
+  margin: 8px 0 0;
+  color: #71717a;
+  font-size: 10px;
+  text-align: center;
+}

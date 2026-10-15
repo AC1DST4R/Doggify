@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "Doggify",
+  "version": "1.2.0",
+  "description": "Randomly replaces YouTube thumbnails with Doggie images.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "*://www.youtube.com/*",
+    "*://youtube.com/*"
+  ],
+  "action": {
+    "default_title": "Doggify",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.youtube.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "doggify@ac1dst4r.com",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "required": [
+          "none"
+        ],
+        "optional": []
+      }
+    }
+  }
+}
